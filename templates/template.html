@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask Parent Template</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">First Web App</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+  </body>
+</html>
+
+<h1>Sean's Restaurant</h1>
+<p>The following table is the food our restaurant serves</p>
+<table style="border-collapse: collapse; width: 100.568%; height: 54px;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 20%; height: 18px;"><a href="http://127.0.0.1:5000/Sushi">Sushi</a></td>
+<td style="width: 20%; height: 18px;"><a href="http://127.0.0.1:5000/Hamburger">Hamburger</a></td>
+<td style="width: 20%; height: 18px;"><a href="http://127.0.0.1:5000/Fries">Fries</a></td>
+<td style="width: 20%; height: 18px;"><a href="HotDog">Hot Dog</a></td>
+<td style="width: 20%; height: 18px;"><a href="Pizza">Pizza</a></td>
+</tr>
+</tbody>
+</table>
